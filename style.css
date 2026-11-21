@@ -376,6 +376,42 @@ img {
     border-radius: 50%;
 }
 
+/* Project groups inside an experience entry */
+.experience-project {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--space-md);
+    margin: var(--space-lg) 0 var(--space-sm);
+}
+
+.experience-header + .experience-project {
+    margin-top: 0;
+}
+
+.experience-project-name {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+.experience-project-domain {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    margin-left: var(--space-sm);
+    padding-left: var(--space-sm);
+    border-left: 1px solid var(--color-border);
+}
+
+.experience-project-period {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
 /* --- Tags (shared) --- */
 .tech-tags,
 .skill-tags {
@@ -654,7 +690,8 @@ img {
         height: 100px;
     }
 
-    .experience-header {
+    .experience-header,
+    .experience-project {
         flex-direction: column;
         gap: var(--space-xs);
     }
