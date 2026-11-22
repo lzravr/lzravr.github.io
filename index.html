@@ -5,424 +5,450 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lazar Avramović – AI-native Senior Software Engineer focused on .NET, with 8 years turning complex problems into well-architected systems.">
     <meta name="author" content="Lazar Avramović">
-    <meta name="theme-color" content="#F8F7F4">
+    <meta name="theme-color" content="#F8F7F4" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#141413" media="(prefers-color-scheme: dark)">
     <title>Lazar Avramović – Senior Software Engineer</title>
+
+    <link rel="canonical" href="https://lzravr.github.io/">
+
+    <!-- Social preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lzravr.github.io/">
+    <meta property="og:site_name" content="Lazar Avramović">
+    <meta property="og:title" content="Lazar Avramović – Senior Software Engineer">
+    <meta property="og:description" content="AI-native Senior Software Engineer focused on .NET, with 8 years turning complex problems into well-architected systems.">
+    <meta property="og:image" content="https://lzravr.github.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Lazar Avramović, Senior Software Engineer – name and LA monogram">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lazar Avramović – Senior Software Engineer">
+    <meta name="twitter:description" content="AI-native Senior Software Engineer focused on .NET, with 8 years turning complex problems into well-architected systems.">
+    <meta name="twitter:image" content="https://lzravr.github.io/og-image.png">
+
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        /* Set the theme before first paint to avoid a flash. */
+        (function () {
+            var stored = null;
+            try { stored = localStorage.getItem('theme'); } catch (e) {}
+            if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 <body>
-    <header class="site-header" role="banner">
-        <div class="header-inner">
-            <a href="#" class="header-name">Lazar Avramović</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="la-header" role="banner">
+        <div class="la-header__inner">
+            <a href="#" class="la-lockup header-lockup" aria-label="Lazar Avramović, back to top"><svg class="la-mark" viewBox="11.3 14.0 77.4 72.0" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M11.33 14.00 L11.33 65.50 L38.12 65.50 L31.98 86.00 L43.46 86.00 L49.61 65.50 L71.04 65.50 L77.19 86.00 L88.67 86.00 L67.08 14.00 L53.58 14.00 L41.43 54.50 L22.33 54.50 L22.33 14.00 Z M60.33 29.78 L67.74 54.50 L52.91 54.50 Z"></path></svg><span>Lazar Avramović</span></a>
             <nav aria-label="Primary navigation">
-                <ul class="nav-links">
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="la-header__nav">
+                    <li><a class="la-navlink" href="#experience">Experience</a></li>
+                    <li><a class="la-navlink" href="#education">Education</a></li>
+                    <li><a class="la-navlink" href="#skills">Skills</a></li>
+                    <li><a class="la-navlink" href="#certifications">Certifications</a></li>
+                    <li><a class="la-navlink" href="#projects">Projects</a></li>
+                    <li><a class="la-navlink" href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
-                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <button class="la-icon-button theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme">
+                <span class="icon-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" aria-hidden="true"><path d="M19.5 14.6A8 8 0 0 1 9.4 4.5a8 8 0 1 0 10.1 10.1z"></path></svg></span>
+                <span class="icon-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="butt" stroke-linejoin="miter" aria-hidden="true"><circle cx="12" cy="12" r="4.25"></circle><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.28 5.28l1.77 1.77M16.95 16.95l1.77 1.77M5.28 18.72l1.77-1.77M16.95 7.05l1.77-1.77"></path></svg></span>
             </button>
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <!-- Hero -->
         <section class="hero" aria-label="Introduction">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="hero-name">Lazar Avramović</h1>
-                        <p class="hero-title">Senior Software Engineer (.NET) / AI-Native Development / M.Sc in Informatics</p>
-                        <p class="hero-summary">AI-native Senior Software Engineer focused on .NET, with 8 years turning complex problems into well-architected systems. Shapes architecture, system design and the product itself. Works directly with clients and stakeholders as a trusted technical voice.</p>
-                        <ul class="hero-links" aria-label="Contact and profiles">
-                            <li><a href="mailto:lzr.avr@gmail.com" aria-label="Email">lzr.avr@gmail.com</a></li>
-                            <li><a href="https://github.com/lzravr" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a></li>
-                            <li><a href="https://linkedin.com/in/lzravr" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a></li>
-                            <li><a href="cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV" class="hero-cv-link">Download CV</a></li>
-                        </ul>
-                    </div>
-                    <div class="hero-photo">
-                        <img src="profile.jpg" alt="Lazar Avramović" width="160" height="160">
-                    </div>
+            <div class="container hero__inner">
+                <div class="hero__text">
+                    <h1 class="hero__name">Lazar Avramović</h1>
+                    <p class="hero__title">Senior Software Engineer (.NET) / AI-Native Development / M.Sc in Informatics</p>
+                    <p class="hero__summary">AI-native Senior Software Engineer focused on .NET, with 8 years turning complex problems into well-architected systems. Shapes architecture, system design and the product itself. Works directly with clients and stakeholders as a trusted technical voice.</p>
+                    <ul class="hero__links" aria-label="Contact and profiles">
+                        <li><a class="la-link" href="mailto:lzr.avr@gmail.com">lzr.avr@gmail.com</a></li>
+                        <li><a class="la-link" href="https://github.com/lzravr" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a class="la-link" href="https://linkedin.com/in/lzravr" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a class="la-button" href="cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a></li>
+                    </ul>
+                </div>
+                <div class="hero__photo">
+                    <img src="profile.jpg" alt="Lazar Avramović" width="160" height="160">
                 </div>
             </div>
         </section>
 
         <!-- Engineering Philosophy -->
-        <section class="section philosophy" aria-label="Engineering Philosophy">
+        <section class="section" id="philosophy" aria-labelledby="philosophy-title">
             <div class="container">
-                <h2 class="section-title">Engineering Philosophy</h2>
-                <blockquote class="philosophy-text">
+                <h2 class="la-section-heading" id="philosophy-title">Engineering philosophy</h2>
+                <blockquote class="la-quote">
                     <p>I approach software as a system, not a collection of features, prioritizing clear architecture and long-term maintainability. Guided by Occam’s razor, I value simplicity without oversimplification and resist unnecessary complexity. I focus on building scalable, well-structured systems with explicit boundaries and predictable behavior as complexity grows. I prefer clarity over cleverness and intentional design over accidental architecture. Well-designed systems should remain understandable, operable, and durable long after the initial implementation.</p>
                 </blockquote>
             </div>
         </section>
 
         <!-- Work Experience -->
-        <section class="section" id="experience" aria-label="Work Experience">
+        <section class="section" id="experience" aria-labelledby="experience-title">
             <div class="container">
-                <h2 class="section-title">Work Experience</h2>
+                <h2 class="la-section-heading" id="experience-title">Work experience</h2>
 
-                <article class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-header-left">
-                            <h3 class="experience-role">Senior Software Engineer</h3>
-                            <p class="experience-company">EPAM Systems <span class="experience-location">/ remote</span></p>
+                <article class="la-plan">
+                    <p class="la-plan__key">September 2024 – <br>present</p>
+                    <div class="la-plan__body">
+                        <h3 class="la-entry__title">Senior Software Engineer</h3>
+                        <p class="la-entry__org">EPAM Systems <span>/ remote</span></p>
+
+                        <div class="la-entry__project">
+                            <h4>Market Integration Platform<span class="la-entry__domain">Insurance</span></h4>
+                            <p class="la-entry__when">Jul 2026 – present</p>
                         </div>
-                        <p class="experience-period">September 2024 – present</p>
-                    </div>
+                        <ul class="la-list">
+                            <li>Key Engineer in a four-person team building an event-driven microservices platform (.NET, Kafka, PostgreSQL) that integrates an insurance client with its markets, designed to cut the time the client needs to act on market opportunities from days to hours; full ownership of three services.</li>
+                            <li>Shape the system's architecture and design alongside the client's lead architects, including on-site workshops at client offices in the US and Warsaw.</li>
+                            <li>Implemented an AI-driven development lifecycle adopted by the whole team: spec-driven development with GitHub Copilot, three custom agents (architect, developer, reviewer), and repository-level specs, skills and hooks that give agents full project context and provide the necessary guardrails.</li>
+                            <li>Lead initiatives and drive technical decisions in refinement and planning; act as a key point of contact across teams and demo progress to client stakeholders.</li>
+                        </ul>
 
-                    <div class="experience-project">
-                        <h4 class="experience-project-name">Market Integration Platform <span class="experience-project-domain">Insurance</span></h4>
-                        <p class="experience-project-period">Jul 2026 – present</p>
-                    </div>
-                    <ul class="experience-bullets">
-                        <li>Key Engineer in a four-person team building an event-driven microservices platform (.NET, Kafka, PostgreSQL) that integrates an insurance client with its markets, designed to cut the time the client needs to act on market opportunities from days to hours; full ownership of three services.</li>
-                        <li>Shape the system's architecture and design alongside the client's lead architects, including on-site workshops at client offices in the US and Warsaw.</li>
-                        <li>Implemented an AI-driven development lifecycle adopted by the whole team: spec-driven development with GitHub Copilot, three custom agents (architect, developer, reviewer), and repository-level specs, skills and hooks that give agents full project context and provide the necessary guardrails.</li>
-                        <li>Lead initiatives and drive technical decisions in refinement and planning; act as a key point of contact across teams and demo progress to client stakeholders.</li>
-                    </ul>
+                        <div class="la-entry__project">
+                            <h4>AI-Powered Repository Analyzer<span class="la-entry__domain">AI Tooling</span></h4>
+                            <p class="la-entry__when">Jan 2025 – Jul 2026</p>
+                        </div>
+                        <ul class="la-list">
+                            <li>Architected an AI-powered repository analysis tool on Azure, using Semantic Kernel to orchestrate targeted LLM analyses that deliver natural-language assessments and concrete improvement steps for codebases.</li>
+                        </ul>
 
-                    <div class="experience-project">
-                        <h4 class="experience-project-name">AI-Powered Repository Analyzer <span class="experience-project-domain">AI Tooling</span></h4>
-                        <p class="experience-project-period">Jan 2025 – Jul 2026</p>
+                        <div class="la-entry__project">
+                            <h4>Healthcare Order Platform<span class="la-entry__domain">Healthcare</span></h4>
+                            <p class="la-entry__when">Sep 2024 – Jan 2026</p>
+                        </div>
+                        <ul class="la-list">
+                            <li>Stabilized and refactored a healthcare platform inherited from a previous vendor, contributing to its rise to a top-2 product within the client ecosystem.</li>
+                            <li>Drove a calendar synchronization feature from concept to production, enabling patients and nurses to track exact delivery times for home medication therapies.</li>
+                            <li>Led observability improvements and resolved critical production incidents under time pressure through in-depth investigation, including complex SQL analysis.</li>
+                            <li>Cleared the accumulated support ticket backlog and drove an 84% reduction in new ticket volume through stabilization and targeted bug fixes.</li>
+                        </ul>
+                        <ul class="la-tags" aria-label="Technologies"><li class="la-tag">.NET</li><li class="la-tag">Kafka</li><li class="la-tag">PostgreSQL</li><li class="la-tag">GitHub Copilot</li><li class="la-tag">Azure</li><li class="la-tag">Azure AI Foundry</li><li class="la-tag">Semantic Kernel</li><li class="la-tag">Angular</li><li class="la-tag">Docker</li><li class="la-tag">MSSQL</li></ul>
                     </div>
-                    <ul class="experience-bullets">
-                        <li>Architected an AI-powered repository analysis tool on Azure, using Semantic Kernel to orchestrate targeted LLM analyses that deliver natural-language assessments and concrete improvement steps for codebases.</li>
-                    </ul>
-
-                    <div class="experience-project">
-                        <h4 class="experience-project-name">Healthcare Order Platform <span class="experience-project-domain">Healthcare</span></h4>
-                        <p class="experience-project-period">Sep 2024 – Jan 2026</p>
-                    </div>
-                    <ul class="experience-bullets">
-                        <li>Stabilized and refactored a healthcare platform inherited from a previous vendor, contributing to its rise to a top-2 product within the client ecosystem.</li>
-                        <li>Drove a calendar synchronization feature from concept to production, enabling patients and nurses to track exact delivery times for home medication therapies.</li>
-                        <li>Led observability improvements and resolved critical production incidents under time pressure through in-depth investigation, including complex SQL analysis.</li>
-                        <li>Cleared the accumulated support ticket backlog and drove an 84% reduction in new ticket volume through stabilization and targeted bug fixes.</li>
-                    </ul>
-                    <div class="tech-tags"><span class="tag">.NET</span><span class="tag">Kafka</span><span class="tag">PostgreSQL</span><span class="tag">GitHub Copilot</span><span class="tag">Azure</span><span class="tag">Azure AI Foundry</span><span class="tag">Semantic Kernel</span><span class="tag">Angular</span><span class="tag">Docker</span><span class="tag">MSSQL</span></div>
                 </article>
 
-                <article class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-header-left">
-                            <h3 class="experience-role">Software Engineer</h3>
-                            <p class="experience-company">Qubitsoft d.o.o <span class="experience-location">/ Kragujevac</span></p>
-                        </div>
-                        <p class="experience-period">July 2021 – September 2024</p>
+                <article class="la-plan">
+                    <p class="la-plan__key">July 2021 – <br>September 2024</p>
+                    <div class="la-plan__body">
+                        <h3 class="la-entry__title">Software Engineer</h3>
+                        <p class="la-entry__org">Qubitsoft d.o.o <span>/ Kragujevac</span></p>
+                        <ul class="la-list">
+                            <li>Identified and resolved a critical processing bottleneck in a high-throughput production system, cutting processing time by 66.67%.</li>
+                            <li>Designed and implemented an automated import component from the ground up, now used by the largest school districts on the platform.</li>
+                            <li>Developed and maintained the file-processing component of a microservice pipeline processing millions of records daily, for Houghton Mifflin Harcourt as part of a remote team based in Dublin.</li>
+                            <li>Mentored and onboarded junior team members.</li>
+                        </ul>
+                        <ul class="la-tags" aria-label="Technologies"><li class="la-tag">.NET</li><li class="la-tag">AWS</li><li class="la-tag">Docker</li><li class="la-tag">Jenkins</li><li class="la-tag">Entity Framework</li><li class="la-tag">MySQL</li><li class="la-tag">Jira</li></ul>
                     </div>
-                    <ul class="experience-bullets">
-                        <li>Identified and resolved a critical processing bottleneck in a high-throughput production system, cutting processing time by 66.67%.</li>
-                        <li>Designed and implemented an automated import component from the ground up, now used by the largest school districts on the platform.</li>
-                        <li>Developed and maintained the file-processing component of a microservice pipeline processing millions of records daily, for Houghton Mifflin Harcourt as part of a remote team based in Dublin.</li>
-                        <li>Mentored and onboarded junior team members.</li>
-                    </ul>
-                    <div class="tech-tags"><span class="tag">.NET</span><span class="tag">AWS</span><span class="tag">Docker</span><span class="tag">Jenkins</span><span class="tag">Entity Framework</span><span class="tag">MySQL</span><span class="tag">Jira</span></div>
                 </article>
 
-                <article class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-header-left">
-                            <h3 class="experience-role">Software Engineer</h3>
-                            <p class="experience-company">Technomedia d.o.o <span class="experience-location">/ Kragujevac</span></p>
-                        </div>
-                        <p class="experience-period">October 2018 – July 2021</p>
+                <article class="la-plan">
+                    <p class="la-plan__key">October 2018 – <br>July 2021</p>
+                    <div class="la-plan__body">
+                        <h3 class="la-entry__title">Software Engineer</h3>
+                        <p class="la-entry__org">Technomedia d.o.o <span>/ Kragujevac</span></p>
+                        <ul class="la-list">
+                            <li>Proposed and implemented a SaaS delivery model and automated deployment pipeline, replacing manual on-site updates and significantly reducing delivery time.</li>
+                            <li>Reverse engineered and ported undocumented C++ device libraries to Java, integrating access control and video surveillance hardware into the monitoring system.</li>
+                        </ul>
+                        <ul class="la-tags" aria-label="Technologies"><li class="la-tag">Docker</li><li class="la-tag">Kubernetes</li><li class="la-tag">Java</li><li class="la-tag">SpringBoot</li><li class="la-tag">Angular</li><li class="la-tag">C++</li><li class="la-tag">SQL</li></ul>
                     </div>
-                    <ul class="experience-bullets">
-                        <li>Proposed and implemented a SaaS delivery model and automated deployment pipeline, replacing manual on-site updates and significantly reducing delivery time.</li>
-                        <li>Reverse engineered and ported undocumented C++ device libraries to Java, integrating access control and video surveillance hardware into the monitoring system.</li>
-                    </ul>
-                    <div class="tech-tags"><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Java</span><span class="tag">SpringBoot</span><span class="tag">Angular</span><span class="tag">C++</span><span class="tag">SQL</span></div>
                 </article>
             </div>
         </section>
 
         <!-- Education -->
-        <section class="section" id="education" aria-label="Education">
+        <section class="section" id="education" aria-labelledby="education-title">
             <div class="container">
-                <h2 class="section-title">Education</h2>
+                <h2 class="la-section-heading" id="education-title">Education</h2>
 
-                <div class="education-item">
-                    <div class="education-header">
-                        <div>
-                            <h3 class="education-degree">M.Sc in Informatics</h3>
-                            <p class="education-school">Faculty of Science, University of Kragujevac</p>
-                            <p class="education-detail">Department of Mathematics and Informatics</p>
-                        </div>
-                        <p class="education-period">2019 – 2021</p>
+                <div class="la-plan">
+                    <p class="la-plan__key">2019 – 2021</p>
+                    <div class="la-plan__body">
+                        <h3 class="la-entry__title">M.Sc in Informatics</h3>
+                        <p class="la-entry__org">Faculty of Science, University of Kragujevac</p>
+                        <p class="la-entry__org"><span>Department of Mathematics and Informatics</span></p>
                     </div>
                 </div>
 
-                <div class="education-item">
-                    <div class="education-header">
-                        <div>
-                            <h3 class="education-degree">B.Sc in Informatics</h3>
-                            <p class="education-school">Faculty of Science, University of Kragujevac</p>
-                            <p class="education-detail">Department of Mathematics and Informatics</p>
-                        </div>
-                        <p class="education-period">2014 – 2019</p>
+                <div class="la-plan">
+                    <p class="la-plan__key">2014 – 2019</p>
+                    <div class="la-plan__body">
+                        <h3 class="la-entry__title">B.Sc in Informatics</h3>
+                        <p class="la-entry__org">Faculty of Science, University of Kragujevac</p>
+                        <p class="la-entry__org"><span>Department of Mathematics and Informatics</span></p>
                     </div>
                 </div>
 
-                <div class="education-item">
-                    <div class="education-header">
-                        <div>
-                            <h3 class="education-degree">Grammar School</h3>
-                            <p class="education-school">Kruševac</p>
-                            <p class="education-detail">Socio-linguistic studies</p>
-                        </div>
-                        <p class="education-period">2010 – 2014</p>
+                <div class="la-plan">
+                    <p class="la-plan__key">2010 – 2014</p>
+                    <div class="la-plan__body">
+                        <h3 class="la-entry__title">Grammar School</h3>
+                        <p class="la-entry__org">Kruševac</p>
+                        <p class="la-entry__org"><span>Socio-linguistic studies</span></p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Skills and Knowledge -->
-        <section class="section" id="skills" aria-label="Skills and Knowledge">
+        <section class="section" id="skills" aria-labelledby="skills-title">
             <div class="container">
-                <h2 class="section-title">Skills and Knowledge</h2>
+                <h2 class="la-section-heading" id="skills-title">Skills and knowledge</h2>
 
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3 class="skill-category-title">AI-Native Development</h3>
-                        <div class="skill-tags"><span class="tag">Claude &amp; Claude Code (primary), GitHub Copilot and other agent harnesses</span><span class="tag">AI Software Development Lifecycle</span><span class="tag">Spec-Driven Development</span><span class="tag">Intent-Driven Development</span><span class="tag">Multi-Agent Workflows</span><span class="tag">Context Engineering (Specs, Skills, Hooks)</span><span class="tag">Agent Guardrails</span><span class="tag">Autonomous Agent Pipelines</span><span class="tag">LLM Integration (Semantic Kernel, Azure AI Foundry)</span></div>
+                <div class="la-plan la-plan--tight">
+                    <h3 class="la-plan__key"><strong>AI-Native Development</strong></h3>
+                    <div class="la-plan__body">
+                        <ul class="la-tags"><li class="la-tag">Claude &amp; Claude Code (primary), GitHub Copilot and other agent harnesses</li><li class="la-tag">AI Software Development Lifecycle</li><li class="la-tag">Spec-Driven Development</li><li class="la-tag">Intent-Driven Development</li><li class="la-tag">Multi-Agent Workflows</li><li class="la-tag">Context Engineering (Specs, Skills, Hooks)</li><li class="la-tag">Agent Guardrails</li><li class="la-tag">Autonomous Agent Pipelines</li><li class="la-tag">LLM Integration (Semantic Kernel, Azure AI Foundry)</li></ul>
                     </div>
-                    <div class="skill-category">
-                        <h3 class="skill-category-title">Software Development</h3>
-                        <div class="skill-tags"><span class="tag">.NET</span><span class="tag">C#</span><span class="tag">Java</span><span class="tag">Angular</span><span class="tag">REST APIs &amp; Integrations</span><span class="tag">Entity Framework</span><span class="tag">SQL (MSSQL, MySQL, PostgreSQL)</span><span class="tag">NoSQL</span><span class="tag">Redis</span><span class="tag">Kafka</span><span class="tag">RabbitMQ</span><span class="tag">SignalR</span><span class="tag">Identity &amp; Access Management (IAM)</span><span class="tag">Unit &amp; Integration Testing</span><span class="tag">xUnit</span><span class="tag">Production debugging &amp; observability</span></div>
+                </div>
+                <div class="la-plan la-plan--tight">
+                    <h3 class="la-plan__key"><strong>Software Development</strong></h3>
+                    <div class="la-plan__body">
+                        <ul class="la-tags"><li class="la-tag">.NET</li><li class="la-tag">C#</li><li class="la-tag">Java</li><li class="la-tag">Angular</li><li class="la-tag">REST APIs &amp; Integrations</li><li class="la-tag">Entity Framework</li><li class="la-tag">SQL (MSSQL, MySQL, PostgreSQL)</li><li class="la-tag">NoSQL</li><li class="la-tag">Redis</li><li class="la-tag">Kafka</li><li class="la-tag">RabbitMQ</li><li class="la-tag">SignalR</li><li class="la-tag">Identity &amp; Access Management (IAM)</li><li class="la-tag">Unit &amp; Integration Testing</li><li class="la-tag">xUnit</li><li class="la-tag">Production debugging &amp; observability</li></ul>
                     </div>
-                    <div class="skill-category">
-                        <h3 class="skill-category-title">Cloud, DevOps &amp; Infrastructure</h3>
-                        <div class="skill-tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">CI/CD (Jenkins, Azure DevOps)</span><span class="tag">Bash</span><span class="tag">Linux</span><span class="tag">Jira</span></div>
+                </div>
+                <div class="la-plan la-plan--tight">
+                    <h3 class="la-plan__key"><strong>Cloud, DevOps &amp; Infrastructure</strong></h3>
+                    <div class="la-plan__body">
+                        <ul class="la-tags"><li class="la-tag">AWS</li><li class="la-tag">Azure</li><li class="la-tag">Docker</li><li class="la-tag">Kubernetes</li><li class="la-tag">CI/CD (Jenkins, Azure DevOps)</li><li class="la-tag">Bash</li><li class="la-tag">Linux</li><li class="la-tag">Jira</li></ul>
                     </div>
-                    <div class="skill-category">
-                        <h3 class="skill-category-title">Engineering Practices</h3>
-                        <div class="skill-tags"><span class="tag">System Architecture &amp; Design</span><span class="tag">Distributed Systems</span><span class="tag">Microservices</span><span class="tag">Event-Driven Architecture</span><span class="tag">Performance Optimization</span><span class="tag">Design Patterns</span><span class="tag">SOLID</span><span class="tag">Software Development Lifecycle (SDLC)</span><span class="tag">Scrum</span><span class="tag">Problem-Solving</span></div>
+                </div>
+                <div class="la-plan la-plan--tight">
+                    <h3 class="la-plan__key"><strong>Engineering Practices</strong></h3>
+                    <div class="la-plan__body">
+                        <ul class="la-tags"><li class="la-tag">System Architecture &amp; Design</li><li class="la-tag">Distributed Systems</li><li class="la-tag">Microservices</li><li class="la-tag">Event-Driven Architecture</li><li class="la-tag">Performance Optimization</li><li class="la-tag">Design Patterns</li><li class="la-tag">SOLID</li><li class="la-tag">Software Development Lifecycle (SDLC)</li><li class="la-tag">Scrum</li><li class="la-tag">Problem-Solving</li></ul>
                     </div>
-                    <div class="skill-category">
-                        <h3 class="skill-category-title">Communication &amp; Leadership</h3>
-                        <div class="skill-tags"><span class="tag">Client Workshops</span><span class="tag">Stakeholder Demos</span><span class="tag">Cross-Team Coordination</span><span class="tag">Product Design Input</span><span class="tag">Technical Decision-Making</span><span class="tag">Service Ownership</span><span class="tag">Refinement &amp; Planning</span><span class="tag">Mentoring</span></div>
+                </div>
+                <div class="la-plan la-plan--tight">
+                    <h3 class="la-plan__key"><strong>Communication &amp; Leadership</strong></h3>
+                    <div class="la-plan__body">
+                        <ul class="la-tags"><li class="la-tag">Client Workshops</li><li class="la-tag">Stakeholder Demos</li><li class="la-tag">Cross-Team Coordination</li><li class="la-tag">Product Design Input</li><li class="la-tag">Technical Decision-Making</li><li class="la-tag">Service Ownership</li><li class="la-tag">Refinement &amp; Planning</li><li class="la-tag">Mentoring</li></ul>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Certifications -->
-        <section class="section" id="certifications" aria-label="Certifications">
+        <section class="section" id="certifications" aria-labelledby="certifications-title">
             <div class="container">
-                <h2 class="section-title">Certifications</h2>
+                <h2 class="la-section-heading" id="certifications-title">Certifications</h2>
 
-                <div class="cert-list">
-                    <div class="cert-item">
-                        <div>
-                            <h3 class="cert-title"><a href="https://verify.skilljar.com/c/v6koc3drk62z" target="_blank" rel="noopener noreferrer">Claude Certified Architect – Foundations</a></h3>
-                            <p class="cert-detail">Anthropic</p>
-                        </div>
-                        <p class="cert-year">2026</p>
+                <div class="la-plan la-plan--tight">
+                    <p class="la-plan__key">2026</p>
+                    <div class="la-plan__body cert">
+                        <h3 class="cert__title"><a class="la-link" href="https://verify.skilljar.com/c/v6koc3drk62z" target="_blank" rel="noopener noreferrer">Claude Certified Architect – Foundations</a></h3>
+                        <p class="cert__issuer">Anthropic</p>
                     </div>
-                    <div class="cert-item">
-                        <div>
-                            <h3 class="cert-title"><a href="https://oaipartnernetwork.credential.net/d0c0136b-4109-4154-bad7-0d4980190d65" target="_blank" rel="noopener noreferrer">OpenAI Technical Practitioner</a></h3>
-                            <p class="cert-detail">OpenAI</p>
-                        </div>
-                        <p class="cert-year">2026</p>
+                </div>
+                <div class="la-plan la-plan--tight">
+                    <p class="la-plan__key">2026</p>
+                    <div class="la-plan__body cert">
+                        <h3 class="cert__title"><a class="la-link" href="https://oaipartnernetwork.credential.net/d0c0136b-4109-4154-bad7-0d4980190d65" target="_blank" rel="noopener noreferrer">OpenAI Technical Practitioner</a></h3>
+                        <p class="cert__issuer">OpenAI</p>
                     </div>
-                    <div class="cert-item">
-                        <div>
-                            <h3 class="cert-title"><a href="https://oaipartnernetwork.credential.net/c2735824-c294-4bdd-91ab-4aa9380c88be" target="_blank" rel="noopener noreferrer">OpenAI Cyber Deployment Practitioner</a></h3>
-                            <p class="cert-detail">OpenAI</p>
-                        </div>
-                        <p class="cert-year">2026</p>
+                </div>
+                <div class="la-plan la-plan--tight">
+                    <p class="la-plan__key">2026</p>
+                    <div class="la-plan__body cert">
+                        <h3 class="cert__title"><a class="la-link" href="https://oaipartnernetwork.credential.net/c2735824-c294-4bdd-91ab-4aa9380c88be" target="_blank" rel="noopener noreferrer">OpenAI Cyber Deployment Practitioner</a></h3>
+                        <p class="cert__issuer">OpenAI</p>
                     </div>
-                    <div class="cert-item">
-                        <div>
-                            <h3 class="cert-title"><a href="https://www.credly.com/badges/751b92e8-e0b8-4d40-8202-49d7a71b4400/public_url" target="_blank" rel="noopener noreferrer">Certified Partner Specialist – Gemini Enterprise Agent Development</a></h3>
-                            <p class="cert-detail">Google Cloud</p>
-                        </div>
-                        <p class="cert-year">2026</p>
+                </div>
+                <div class="la-plan la-plan--tight">
+                    <p class="la-plan__key">2026</p>
+                    <div class="la-plan__body cert">
+                        <h3 class="cert__title"><a class="la-link" href="https://www.credly.com/badges/751b92e8-e0b8-4d40-8202-49d7a71b4400/public_url" target="_blank" rel="noopener noreferrer">Certified Partner Specialist – Gemini Enterprise Agent Development</a></h3>
+                        <p class="cert__issuer">Google Cloud</p>
                     </div>
-                    <div class="cert-item">
-                        <div>
-                            <h3 class="cert-title">Applied Skills: Accelerate app development by using GitHub Copilot</h3>
-                            <p class="cert-detail">Microsoft</p>
-                        </div>
-                        <p class="cert-year">2026</p>
+                </div>
+                <div class="la-plan la-plan--tight">
+                    <p class="la-plan__key">2026</p>
+                    <div class="la-plan__body cert">
+                        <h3 class="cert__title">Applied Skills: Accelerate app development by using GitHub Copilot</h3>
+                        <p class="cert__issuer">Microsoft</p>
                     </div>
-                    <div class="cert-item">
-                        <div>
-                            <h3 class="cert-title">Deploy an Agent with Agent Development Kit (ADK)</h3>
-                            <p class="cert-detail">Google</p>
-                        </div>
-                        <p class="cert-year">2025</p>
+                </div>
+                <div class="la-plan la-plan--tight">
+                    <p class="la-plan__key">2025</p>
+                    <div class="la-plan__body cert">
+                        <h3 class="cert__title">Deploy an Agent with Agent Development Kit (ADK)</h3>
+                        <p class="cert__issuer">Google</p>
                     </div>
-                    <div class="cert-item">
-                        <div>
-                            <h3 class="cert-title">Azure Fundamentals (AZ-900)</h3>
-                            <p class="cert-detail">Microsoft</p>
-                        </div>
-                        <p class="cert-year">2024</p>
+                </div>
+                <div class="la-plan la-plan--tight">
+                    <p class="la-plan__key">2024</p>
+                    <div class="la-plan__body cert">
+                        <h3 class="cert__title">Azure Fundamentals (AZ-900)</h3>
+                        <p class="cert__issuer">Microsoft</p>
                     </div>
-                    <div class="cert-item">
-                        <div>
-                            <h3 class="cert-title">Deep Learning Institute: Fundamentals of Deep Learning</h3>
-                            <p class="cert-detail">NVIDIA</p>
-                        </div>
-                        <p class="cert-year">2022</p>
+                </div>
+                <div class="la-plan la-plan--tight">
+                    <p class="la-plan__key">2022</p>
+                    <div class="la-plan__body cert">
+                        <h3 class="cert__title">Deep Learning Institute: Fundamentals of Deep Learning</h3>
+                        <p class="cert__issuer">NVIDIA</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Selected Projects -->
-        <section class="section" id="projects" aria-label="Selected Projects">
+        <section class="section" id="projects" aria-labelledby="projects-title">
             <div class="container">
-                <h2 class="section-title">Selected Projects (additional technical detail)</h2>
+                <h2 class="la-section-heading" id="projects-title"><span>Selected projects</span><span class="la-section-heading__aside">additional technical detail</span></h2>
 
-                <article class="project-item">
-                    <div class="project-header">
-                        <h3 class="project-name">Market Integration Platform</h3>
-                        <p class="project-meta">EPAM Systems <span class="project-period">2026 – present</span></p>
+                <article class="la-plan">
+                    <p class="la-plan__key">2026 – present</p>
+                    <div class="la-plan__body">
+                        <h3 class="la-entry__title">Market Integration Platform</h3>
+                        <p class="la-entry__org">EPAM Systems</p>
+                        <p class="la-entry__text">Event-driven microservices on .NET, Kafka and PostgreSQL, integrating an insurance client with its markets. Built entirely through AI-assisted development: features are specified up front and delivered with GitHub Copilot through architect, developer and reviewer agents, guided by repository-level specs, skills and hooks.</p>
+                        <ul class="la-tags" aria-label="Technologies"><li class="la-tag">.NET</li><li class="la-tag">Kafka</li><li class="la-tag">PostgreSQL</li><li class="la-tag">Microservices</li><li class="la-tag">GitHub Copilot</li><li class="la-tag">Spec-Driven Development</li></ul>
                     </div>
-                    <p class="project-description">Event-driven microservices on .NET, Kafka and PostgreSQL, integrating an insurance client with its markets. Built entirely through AI-assisted development: features are specified up front and delivered with GitHub Copilot through architect, developer and reviewer agents, guided by repository-level specs, skills and hooks.</p>
-                    <div class="tech-tags"><span class="tag">.NET</span><span class="tag">Kafka</span><span class="tag">PostgreSQL</span><span class="tag">Microservices</span><span class="tag">GitHub Copilot</span><span class="tag">Spec-Driven Development</span></div>
                 </article>
 
-                <article class="project-item">
-                    <div class="project-header">
-                        <h3 class="project-name">Buriza</h3>
-                        <p class="project-meta">personal project <span class="project-period">2026 – present</span></p>
+                <article class="la-plan">
+                    <p class="la-plan__key">2026 – present</p>
+                    <div class="la-plan__body">
+                        <h3 class="la-entry__title">Buriza</h3>
+                        <p class="la-entry__org">personal project</p>
+                        <p class="la-entry__text">A card game invented with friends during university, revived as a multiplayer web game built entirely by AI. Development runs on a fully automated AI lifecycle on Claude Code, driven by intent-driven development and enforced by guardrails: no manual coding or code review, features typically delivered in a single pass, and a stable project that needs minimal input.</p>
+                        <ul class="la-tags" aria-label="Technologies"><li class="la-tag">Claude Code</li><li class="la-tag">Claude</li><li class="la-tag">Intent-Driven Development</li><li class="la-tag">Agent Guardrails</li><li class="la-tag">Autonomous AI Development Lifecycle</li></ul>
                     </div>
-                    <p class="project-description">A card game invented with friends during university, revived as a multiplayer web game built entirely by AI. Development runs on a fully automated AI lifecycle on Claude Code, driven by intent-driven development and enforced by guardrails: no manual coding or code review, features typically delivered in a single pass, and a stable project that needs minimal input.</p>
-                    <div class="tech-tags"><span class="tag">Claude Code</span><span class="tag">Claude</span><span class="tag">Intent-Driven Development</span><span class="tag">Agent Guardrails</span><span class="tag">Autonomous AI Development Lifecycle</span></div>
                 </article>
 
-                <article class="project-item">
-                    <div class="project-header">
-                        <h3 class="project-name">AI-Powered Repository Analyzer</h3>
-                        <p class="project-meta">EPAM Systems <span class="project-period">2025 – 2026</span></p>
+                <article class="la-plan">
+                    <p class="la-plan__key">2025 – 2026</p>
+                    <div class="la-plan__body">
+                        <h3 class="la-entry__title">AI-Powered Repository Analyzer</h3>
+                        <p class="la-entry__org">EPAM Systems</p>
+                        <p class="la-entry__text">Collects deterministic and static data from a repository and feeds it to LLMs through task-specific prompts, producing per-topic analyses and an overall summary with actionable improvement steps. Used for initial project discovery and iterative improvement; built with agentic development practices for code generation and review.</p>
+                        <ul class="la-tags" aria-label="Technologies"><li class="la-tag">.NET</li><li class="la-tag">Azure Functions</li><li class="la-tag">Azure Blob Storage</li><li class="la-tag">Azure AI Foundry</li><li class="la-tag">Semantic Kernel</li></ul>
                     </div>
-                    <p class="project-description">Collects deterministic and static data from a repository and feeds it to LLMs through task-specific prompts, producing per-topic analyses and an overall summary with actionable improvement steps. Used for initial project discovery and iterative improvement; built with agentic development practices for code generation and review.</p>
-                    <div class="tech-tags"><span class="tag">.NET</span><span class="tag">Azure Functions</span><span class="tag">Azure Blob Storage</span><span class="tag">Azure AI Foundry</span><span class="tag">Semantic Kernel</span></div>
                 </article>
 
-                <article class="project-item">
-                    <div class="project-header">
-                        <h3 class="project-name">Rescue and Redesign of Healthcare Order Platform</h3>
-                        <p class="project-meta">EPAM Systems <span class="project-period">2024 – 2026</span></p>
+                <article class="la-plan">
+                    <p class="la-plan__key">2024 – 2026</p>
+                    <div class="la-plan__body">
+                        <h3 class="la-entry__title">Rescue and Redesign of Healthcare Order Platform</h3>
+                        <p class="la-entry__org">EPAM Systems</p>
+                        <p class="la-entry__text">Enterprise order management platform inherited from a previous vendor, built on a modern stack but with poor practices and no documentation. Reverse engineered and documented the system and reduced technical debt across code, architecture and infrastructure while continuing to deliver new features.</p>
+                        <ul class="la-tags" aria-label="Technologies"><li class="la-tag">.NET</li><li class="la-tag">Docker</li><li class="la-tag">Azure</li><li class="la-tag">Entity Framework</li><li class="la-tag">MSSQL</li></ul>
                     </div>
-                    <p class="project-description">Enterprise order management platform inherited from a previous vendor, built on a modern stack but with poor practices and no documentation. Reverse engineered and documented the system and reduced technical debt across code, architecture and infrastructure while continuing to deliver new features.</p>
-                    <div class="tech-tags"><span class="tag">.NET</span><span class="tag">Docker</span><span class="tag">Azure</span><span class="tag">Entity Framework</span><span class="tag">MSSQL</span></div>
                 </article>
 
-                <article class="project-item">
-                    <div class="project-header">
-                        <h3 class="project-name">HMH – Education and Learning Technology</h3>
-                        <p class="project-meta">Qubitsoft d.o.o <span class="project-period">2021 – 2024</span></p>
+                <article class="la-plan">
+                    <p class="la-plan__key">2021 – 2024</p>
+                    <div class="la-plan__body">
+                        <h3 class="la-entry__title">HMH – Education and Learning Technology</h3>
+                        <p class="la-entry__org">Qubitsoft d.o.o</p>
+                        <p class="la-entry__text">Large-scale data pipeline for schools across the USA, built with a remote team based in Dublin. Owned the file-processing component and designed the automated SFTP import; removed a processing bottleneck by restructuring data lookups, reducing time complexity from quadratic to linear.</p>
+                        <ul class="la-tags" aria-label="Technologies"><li class="la-tag">.NET</li><li class="la-tag">Docker</li><li class="la-tag">AWS</li><li class="la-tag">Jenkins</li><li class="la-tag">Entity Framework</li><li class="la-tag">MySQL</li></ul>
                     </div>
-                    <p class="project-description">Large-scale data pipeline for schools across the USA, built with a remote team based in Dublin. Owned the file-processing component and designed the automated SFTP import; removed a processing bottleneck by restructuring data lookups, reducing time complexity from quadratic to linear.</p>
-                    <div class="tech-tags"><span class="tag">.NET</span><span class="tag">Docker</span><span class="tag">AWS</span><span class="tag">Jenkins</span><span class="tag">Entity Framework</span><span class="tag">MySQL</span></div>
                 </article>
 
-                <article class="project-item">
-                    <div class="project-header">
-                        <h3 class="project-name">Uno</h3>
-                        <p class="project-meta">Startup <span class="project-period">2022 – 2024</span></p>
+                <article class="la-plan">
+                    <p class="la-plan__key">2022 – 2024</p>
+                    <div class="la-plan__body">
+                        <h3 class="la-entry__title">Uno</h3>
+                        <p class="la-entry__org">Startup</p>
+                        <p class="la-entry__text">Booking application built as a startup with a team of four. As System Architect and lead, designed the architecture following DDD, chose the tech stack and set up the infrastructure from scratch: Git server, Docker, CI/CD, VPN, message queues, databases and ELK stack. Delivered an MVP; the venture did not secure funding.</p>
+                        <ul class="la-tags" aria-label="Technologies"><li class="la-tag">.NET</li><li class="la-tag">Docker</li><li class="la-tag">Jenkins</li><li class="la-tag">RabbitMQ</li><li class="la-tag">Redis</li><li class="la-tag">MySQL</li><li class="la-tag">Elasticsearch</li><li class="la-tag">Kibana</li><li class="la-tag">EC2</li><li class="la-tag">Bash</li><li class="la-tag">Linux</li></ul>
                     </div>
-                    <p class="project-description">Booking application built as a startup with a team of four. As System Architect and lead, designed the architecture following DDD, chose the tech stack and set up the infrastructure from scratch: Git server, Docker, CI/CD, VPN, message queues, databases and ELK stack. Delivered an MVP; the venture did not secure funding.</p>
-                    <div class="tech-tags"><span class="tag">.NET</span><span class="tag">Docker</span><span class="tag">Jenkins</span><span class="tag">RabbitMQ</span><span class="tag">Redis</span><span class="tag">MySQL</span><span class="tag">Elasticsearch</span><span class="tag">Kibana</span><span class="tag">EC2</span><span class="tag">Bash</span><span class="tag">Linux</span></div>
                 </article>
 
-                <article class="project-item">
-                    <div class="project-header">
-                        <h3 class="project-name">BCO Algorithm Parallelization for Solving Complex Problems in System P</h3>
-                        <p class="project-meta">Master's thesis <span class="project-period">2021</span></p>
+                <article class="la-plan">
+                    <p class="la-plan__key">2021</p>
+                    <div class="la-plan__body">
+                        <h3 class="la-entry__title">BCO Algorithm Parallelization for Solving Complex Problems in System P</h3>
+                        <p class="la-entry__org">Master's thesis</p>
+                        <p class="la-entry__text">Designed a parallel version of the Bee Colony Optimization (BCO) metaheuristic with MPI and evaluated its effectiveness on hard logical problems in default reasoning (System P), where exact solutions cannot be computed in polynomial time. Supervised by Dr. Tatjana Stojanović.</p>
+                        <ul class="la-tags" aria-label="Technologies"><li class="la-tag">C++</li><li class="la-tag">MPI</li></ul>
                     </div>
-                    <p class="project-description">Designed a parallel version of the Bee Colony Optimization (BCO) metaheuristic with MPI and evaluated its effectiveness on hard logical problems in default reasoning (System P), where exact solutions cannot be computed in polynomial time. Supervised by Dr. Tatjana Stojanović.</p>
-                    <div class="tech-tags"><span class="tag">C++</span><span class="tag">MPI</span></div>
                 </article>
 
-                <article class="project-item">
-                    <div class="project-header">
-                        <h3 class="project-name">Technomedia Cloud</h3>
-                        <p class="project-meta">Technomedia d.o.o <span class="project-period">2020</span></p>
+                <article class="la-plan">
+                    <p class="la-plan__key">2020</p>
+                    <div class="la-plan__body">
+                        <h3 class="la-entry__title">Technomedia Cloud</h3>
+                        <p class="la-entry__org">Technomedia d.o.o</p>
+                        <p class="la-entry__text">Internal portal for on-demand software provisioning: customer support starts, stops and pauses client instances from a single interface. Angular frontend with a Java API orchestrating instances on Kubernetes, delivering software faster with built-in redundancy.</p>
+                        <ul class="la-tags" aria-label="Technologies"><li class="la-tag">Java</li><li class="la-tag">Angular</li><li class="la-tag">Docker</li><li class="la-tag">Kubernetes</li></ul>
                     </div>
-                    <p class="project-description">Internal portal for on-demand software provisioning: customer support starts, stops and pauses client instances from a single interface. Angular frontend with a Java API orchestrating instances on Kubernetes, delivering software faster with built-in redundancy.</p>
-                    <div class="tech-tags"><span class="tag">Java</span><span class="tag">Angular</span><span class="tag">Docker</span><span class="tag">Kubernetes</span></div>
                 </article>
             </div>
         </section>
 
         <!-- Languages -->
-        <section class="section" id="languages" aria-label="Languages">
+        <section class="section" id="languages" aria-labelledby="languages-title">
             <div class="container">
-                <h2 class="section-title">Languages</h2>
-                <div class="languages-list">
-                    <div class="language-item">
-                        <span class="language-name">Serbian</span>
-                        <span class="language-level">native</span>
-                    </div>
-                    <div class="language-item">
-                        <span class="language-name">English</span>
-                        <span class="language-level">C1+</span>
-                    </div>
+                <h2 class="la-section-heading" id="languages-title">Languages</h2>
+                <div class="la-plan la-plan--tight">
+                    <p class="la-plan__key"><strong>Serbian</strong></p>
+                    <div class="la-plan__body"><p class="language-level">native</p></div>
+                </div>
+                <div class="la-plan la-plan--tight">
+                    <p class="la-plan__key"><strong>English</strong></p>
+                    <div class="la-plan__body"><p class="language-level">C1+</p></div>
                 </div>
             </div>
         </section>
 
         <!-- Contact -->
-        <section class="section contact" id="contact" aria-label="Contact">
+        <section class="section contact" id="contact" aria-labelledby="contact-title">
             <div class="container">
-                <h2 class="section-title">Contact</h2>
-                <p class="contact-line">Available for senior backend and software architecture roles – contract or full-time.</p>
-                <div class="contact-links">
-                    <a href="mailto:lzr.avr@gmail.com" class="contact-email">lzr.avr@gmail.com</a>
-                    <a href="https://github.com/lzravr" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://linkedin.com/in/lzravr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                </div>
+                <h2 class="la-section-heading" id="contact-title">Contact</h2>
+                <p class="contact__line">Available for senior backend and software architecture roles – contract or full-time.</p>
+                <ul class="contact__links">
+                    <li><a class="la-link contact__email" href="mailto:lzr.avr@gmail.com">lzr.avr@gmail.com</a></li>
+                    <li><a class="la-link" href="https://github.com/lzravr" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a class="la-link" href="https://linkedin.com/in/lzravr" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
             </div>
         </section>
     </main>
 
     <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <p>Lazar Avramović</p>
+        <div class="container site-footer__inner">
+            <span class="la-lockup footer-lockup"><svg class="la-mark" viewBox="11.3 14.0 77.4 72.0" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M11.33 14.00 L11.33 65.50 L38.12 65.50 L31.98 86.00 L43.46 86.00 L49.61 65.50 L71.04 65.50 L77.19 86.00 L88.67 86.00 L67.08 14.00 L53.58 14.00 L41.43 54.50 L22.33 54.50 L22.33 14.00 Z M60.33 29.78 L67.74 54.50 L52.91 54.50 Z"></path></svg><span>Lazar Avramović</span></span>
         </div>
     </footer>
 
     <script>
         (function () {
-            const toggle = document.getElementById('themeToggle');
-            const root = document.documentElement;
-            const stored = localStorage.getItem('theme');
+            var root = document.documentElement;
+            var toggle = document.getElementById('themeToggle');
 
-            if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                root.setAttribute('data-theme', 'dark');
+            function label() {
+                var dark = root.getAttribute('data-theme') === 'dark';
+                toggle.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
             }
+            label();
 
             toggle.addEventListener('click', function () {
-                const isDark = root.getAttribute('data-theme') === 'dark';
-                root.setAttribute('data-theme', isDark ? 'light' : 'dark');
-                localStorage.setItem('theme', isDark ? 'light' : 'dark');
-            });
-
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-                anchor.addEventListener('click', function (e) {
-                    var target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        e.preventDefault();
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                });
+                var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                root.setAttribute('data-theme', next);
+                try { localStorage.setItem('theme', next); } catch (e) {}
+                label();
             });
         })();
     </script>
